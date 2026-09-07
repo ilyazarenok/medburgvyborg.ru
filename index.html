@@ -139,12 +139,16 @@ h2.pop{font-size:clamp(1.75rem,4.4vw,3.1rem);-webkit-text-stroke-width:3px;text-
 
 /* ── увеличение при наведении и фокусе ────────── */
 @media (hover:hover) and (pointer:fine){
-  .panel{transition:box-shadow .2s ease,border-color .2s ease}
-  .panel .shot img{transition:transform .4s cubic-bezier(.2,.7,.3,1)}
-  .panel .ribbon{transition:background-color .2s ease,color .2s ease,letter-spacing .2s ease}
-  .panel:hover,.panel:focus-within{box-shadow:var(--sh-up) var(--sh-up) 0 var(--ink)}
-  .panel:not(.no-zoom):hover .shot img,.panel:not(.no-zoom):focus-within .shot img{transform:scale(1.11)}
-  .panel:hover .ribbon,.panel:focus-within .ribbon{background:var(--yellow);letter-spacing:.09em}
+  /* растёт вся панель целиком, кадрирование внутри не меняется.
+     scale — отдельное свойство, поэтому не спорит с transform у прокрутки */
+  .panel{transition:box-shadow .2s ease,scale .2s ease}
+  .panel .ribbon{transition:background-color .2s ease,color .2s ease}
+  .panel:not(.no-zoom):hover,.panel:not(.no-zoom):focus-within{
+    box-shadow:var(--sh-up) var(--sh-up) 0 var(--ink);
+    scale:1.035;
+    z-index:4;
+  }
+  .panel:not(.no-zoom):hover .ribbon,.panel:not(.no-zoom):focus-within .ribbon{background:var(--yellow)}
   .note{transition:box-shadow .2s ease}
   .note:hover{box-shadow:11px 11px 0 var(--ink)}
   .hours{transition:box-shadow .2s ease}
