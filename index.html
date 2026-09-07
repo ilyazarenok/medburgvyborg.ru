@@ -217,14 +217,14 @@ h2.pop{font-size:clamp(1.75rem,4.4vw,3.1rem);-webkit-text-stroke-width:3px;text-
 .story{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,2.6vw,32px);align-items:start}
 .notes{display:flex;flex-direction:column;gap:16px}
 .note{
-  background:var(--yellow);border:var(--edge) solid var(--ink);box-shadow:var(--sh) var(--sh) 0 var(--ink);
+  border:var(--edge) solid var(--ink);box-shadow:var(--sh) var(--sh) 0 var(--ink);
   padding:16px 18px;font-weight:500;
 }
 .note b{font-family:var(--display);text-transform:uppercase;color:var(--red-dk);letter-spacing:.04em}
-.notes .note:nth-child(odd){background:var(--yellow);color:var(--ink)}
-.notes .note:nth-child(odd) b{color:var(--red-dk)}
-.notes .note:nth-child(even){background:var(--teal);color:var(--paper-lt)}
-.notes .note:nth-child(even) b{color:var(--paper-lt)}
+.notes .note:nth-child(odd){background:var(--red);color:var(--paper-lt)}
+.notes .note:nth-child(odd) b{color:var(--yellow)}
+.notes .note:nth-child(even){background:var(--paper-lt);color:var(--ink)}
+.notes .note:nth-child(even) b{color:var(--red-dk)}
 .story-shots{display:flex;flex-direction:column;gap:clamp(18px,2.6vw,26px)}
 
 /* ── найти ────────────────────────────────────── */
