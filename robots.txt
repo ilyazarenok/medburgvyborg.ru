@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /src/
 
-Sitemap: https://medburgvyborg.ru/sitemap.xml
+Sitemap: https://www.medburgvyborg.ru/sitemap.xml
